@@ -41,7 +41,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.manager.startUpdatingLocation()
             self.manager.startUpdatingHeading()
             self.map.showsUserLocation = true
-            self.map.centerCoordinate = self.manager.location!.coordinate
         }
         else {
             self.manager.stopUpdatingLocation()
@@ -59,6 +58,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
         else {
             self.firstPosition = self.manager.location!
+            self.map.centerCoordinate = self.manager.location!.coordinate
             self.previousPosition = self.manager.location!
             self.addNewAnnotation(self.manager.location!)
         }
@@ -81,6 +81,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.presentViewController(alerta, animated: true, completion: nil)
     }
 
+    @IBAction func zoomInAction() {
+        let span = MKCoordinateSpan(latitudeDelta: 0.0075,longitudeDelta: 0.0075)
+        let region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: self.manager.location!.coordinate.latitude, longitude: self.manager.location!.coordinate.longitude), span: span)
+        self.map.setRegion(region, animated: true)
+    }
+    
     @IBAction func viewModeAction() {
         if (self.viewMode.selectedSegmentIndex == 0) {
             self.map.mapType = .Standard

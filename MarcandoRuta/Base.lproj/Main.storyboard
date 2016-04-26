@@ -23,7 +23,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Vd8-o4-Lnj">
                                 <rect key="frame" x="206" y="521" width="189" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="189" id="PxG-jQ-XdT"/>
+                                    <constraint firstAttribute="width" constant="189" id="VST-au-sYx"/>
                                 </constraints>
                                 <segments>
                                     <segment title="Standard"/>
@@ -34,15 +34,24 @@
                                     <action selector="viewModeAction" destination="BYZ-38-t0r" eventType="valueChanged" id="62v-Kg-gau"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LHw-Tv-ByQ">
+                                <rect key="frame" x="272" y="62" width="56" height="30"/>
+                                <state key="normal" title="Zoom In"/>
+                                <connections>
+                                    <action selector="zoomInAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="RkO-W6-9ei"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="aCW-NJ-2hX" secondAttribute="bottom" id="24N-tL-PV9"/>
-                            <constraint firstItem="aCW-NJ-2hX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ORk-x6-bQh"/>
-                            <constraint firstItem="aCW-NJ-2hX" firstAttribute="centerX" secondItem="Vd8-o4-Lnj" secondAttribute="centerX" id="fSy-yR-HJB"/>
-                            <constraint firstItem="Vd8-o4-Lnj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jaL-li-nkH"/>
-                            <constraint firstItem="aCW-NJ-2hX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p9x-6x-7vY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vd8-o4-Lnj" secondAttribute="bottom" constant="51" id="pXb-C6-YZQ"/>
+                            <constraint firstItem="aCW-NJ-2hX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5qm-mG-TiM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vd8-o4-Lnj" secondAttribute="bottom" constant="51" id="Dvs-tV-Avv"/>
+                            <constraint firstItem="aCW-NJ-2hX" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="XH7-ZQ-q69"/>
+                            <constraint firstItem="aCW-NJ-2hX" firstAttribute="centerX" secondItem="LHw-Tv-ByQ" secondAttribute="centerX" id="dPz-Jn-Ggz"/>
+                            <constraint firstItem="LHw-Tv-ByQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jES-oN-0Kx"/>
+                            <constraint firstItem="aCW-NJ-2hX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="uAG-52-Hfn"/>
+                            <constraint firstItem="LHw-Tv-ByQ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="xC0-Pa-2vE"/>
+                            <constraint firstItem="LHw-Tv-ByQ" firstAttribute="centerX" secondItem="Vd8-o4-Lnj" secondAttribute="centerX" id="xWU-zE-Hd0"/>
                         </constraints>
                     </view>
                     <connections>
